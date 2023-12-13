@@ -1,0 +1,663 @@
+:root {
+  --red-color: rgba(255, 0, 0, 0.832);
+  --yellow-color: rgb(255, 224, 19);
+  --text-color: white;
+  --black-color: #0f0f0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black-color);
+}
+
+/* NAVBAR START */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/img/hero-fix.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navbar {
+  padding: 20px 0;
+  width: 100%;
+  position: fixed;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolling-active {
+  background-color: var(--black-color);
+  padding: 30px 0;
+  border-bottom: 2px solid white;
+  opacity: 95%;
+  z-index: 1000;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.navbar .box-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .box-navbar .logo h1 {
+  font-size: 30px;
+  color: var(--yellow-color);
+  font-style: italic;
+}
+
+.navbar .box-navbar .logo span {
+  color: var(--red-color);
+}
+
+.navbar .box-navbar .nav-list {
+  display: flex;
+}
+
+.navbar .box-navbar .nav-list li {
+  list-style: none;
+}
+
+.navbar .box-navbar .nav-list li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+.navbar .box-navbar .nav-list li a:hover {
+  color: var(--yellow-color);
+  transition: 0.3s;
+}
+
+.hamburger-menu {
+  color: white;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+}
+/* NAVBAR END */
+
+/* HERO START */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.hero .box-hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .box-hero .box:nth-child(2) img {
+  width: 100%;
+}
+
+.hero .box-hero .box:nth-child(2) img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hero .box-hero .box:nth-child(1) h3 {
+  color: white;
+  font-size: 3vw;
+}
+
+.hero .box-hero .box:nth-child(1) h1 {
+  color: var(--yellow-color);
+  font-size: 4vw;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.hero .box-hero .box:nth-child(1) span {
+  color: var(--red-color);
+}
+
+.hero .box-hero .box:nth-child(1) p {
+  color: white;
+  font-size: 1.5vw;
+  line-height: 1.5;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.hero .box-hero .box:nth-child(1) button {
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  background-color: var(--red-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hero .box-hero .box:nth-child(1) button:hover {
+  background-color: rgb(183, 21, 21);
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+/* HERO END */
+
+/* TENTANG KAMI START */
+.content {
+  color: white;
+}
+
+.about {
+  padding-top: 9%;
+}
+
+.about h2 {
+  font-size: 35px;
+  color: var(--yellow-color);
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.about span {
+  color: var(--red-color);
+}
+
+.about .row .about-img img {
+  border-radius: 30px;
+}
+
+.about .row {
+  display: flex;
+  column-gap: 30px;
+}
+
+.seafood h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.seafood span {
+  color: var(--yellow-color);
+}
+
+.seafood p {
+  margin-bottom: 20px;
+}
+/* TENTANG KAMI END */
+
+/* MENU START */
+.menu {
+  padding-top: 9%;
+}
+
+.menu h2 {
+  font-size: 35px;
+  color: var(--yellow-color);
+  text-align: center;
+  padding-top: 30px;
+}
+
+.menu span {
+  color: var(--red-color);
+}
+
+.menu p {
+  text-align: center;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(107, 107, 107),
+    rgb(190, 190, 190)
+  );
+  border-radius: 36px;
+}
+
+.menu .row .menu-card img {
+  border-radius: 20%;
+  width: 70%;
+  padding-top: 20px;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.menu .row .menu-card img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* MENU END */
+
+/* KONTAK START */
+.contact {
+  padding-top: 9%;
+}
+
+.contact h2 {
+  font-size: 35px;
+  color: var(--yellow-color);
+  text-align: center;
+  padding-top: 30px;
+}
+
+.contact span {
+  color: var(--red-color);
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(107, 107, 107),
+    rgb(190, 190, 190)
+  );
+  border-radius: 15px;
+}
+
+.contact .row .maps {
+  flex: 1 1 45rem;
+  /* border-radius: 15px; */
+  align-items: start;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--black-color);
+  border: 1px solid #eee;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #ffff;
+}
+
+.contact .row form .btn {
+  margin-top: 2rem;
+  padding: 1rem 5rem;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* KONTAK END */
+
+/* ASIDE PROFILE START */
+.biodata {
+  padding-top: 9%;
+  /* margin: 0 18vw; */
+}
+
+.biodata h2 {
+  font-size: 35px;
+  color: var(--yellow-color);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.biodata .row .bio-image img {
+  border-radius: 30px;
+  width: 15vw;
+  margin: 15px 0;
+  padding-bottom: 0;
+}
+
+.biodata .row {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(107, 107, 107),
+    rgb(190, 190, 190)
+  );
+  border-radius: 15px;
+}
+
+.biodata .row .text-box .text-group {
+  padding-top: 15px;
+}
+
+.biodata .row .text-box .text-group h4 {
+  font-size: 15px;
+  color: var(--black-color);
+}
+
+.biodata .row .text-box .text-group p {
+  font-size: 20px;
+  color: var(--black-color);
+}
+/* ASIDE PROFILE END */
+
+/* FOOTER START */
+footer {
+  background-color: var(--red-color);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--yellow-color);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #ffff;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--yellow-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+/* FOOTER END */
+
+/* MEDIA QUERY */
+
+/* UKURAN TABLET */
+@media screen and (max-width: 1200px) {
+  .hero .box-hero .box:nth-child(1) button {
+    width: 170px;
+  }
+
+  .about h2 {
+    margin-top: 5%;
+  }
+
+  .about .row .about-img img {
+    width: 50vw;
+  }
+
+  .about .row .seafood h3 {
+    font-size: 25px;
+  }
+
+  .about .row .seafood p {
+    font-size: 15px;
+  }
+
+  .biodata h2 {
+    margin-top: 5%;
+  }
+
+  .biodata .row .bio-image img {
+    width: 20vw;
+  }
+
+  .text-box .text-group h4 {
+    font-size: 13px;
+  }
+
+  .text-box .text-group p {
+    font-size: 17px;
+  }
+
+  .biodata .row {
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .navbar .box-navbar .nav-list {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    background-color: var(--black-color);
+  }
+
+  .navbar .box-navbar .nav-list.menu-active {
+    top: 80px;
+    opacity: 1;
+    border-top: 1px solid white;
+  }
+
+  .hero .box-hero .box:nth-child(1) p {
+    font-size: 12px;
+  }
+
+  /* TENTANG KAMI START */
+  .about .row .about-img img {
+    width: 40vw;
+  }
+  /* TENTANG KAMI END */
+}
+
+@media screen and (max-width: 768px) {
+  .hero .box-hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    padding-top: 70px;
+  }
+
+  .hero .box-hero .box:nth-child(1) {
+    order: 2;
+    text-align: center;
+  }
+
+  .hero .box-hero .box:nth-child(2) {
+    order: 1;
+    text-align: center;
+  }
+
+  .hero .box-hero .box:nth-child(2) img {
+    width: 60vw;
+  }
+
+  /* TENTANG KAMI START */
+  .about h2 {
+    margin-top: 10%;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    /* height: 24rem; */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .seafood {
+    padding: 0;
+  }
+
+  .about .row .seafood h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .seafood p {
+    font-size: 15px;
+  }
+  /* TENTANG KAMI END */
+
+  .menu h2 {
+    margin-top: 10%;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact h2 {
+    margin-top: 9%;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .maps {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+
+  /* ASIDE START */
+  .biodata h2 {
+    margin-top: 10%;
+  }
+
+  .biodata .row {
+    flex-wrap: wrap;
+    /* align-items: center; */
+  }
+
+  .biodata .row .bio-image img {
+    width: 30vw;
+  }
+
+  /* ASIDE END */
+}
+
+@media screen and (max-width: 575px) {
+  .navbar .box-navbar .logo h1 {
+    font-size: 20px;
+  }
+
+  .hero .box-hero .box:nth-child(1) h3 {
+    font-size: 20px;
+  }
+
+  .hero .box-hero .box:nth-child(1) h1 {
+    font-size: 30px;
+  }
+
+  .about h2 {
+    margin-top: 10%;
+    font-size: 30px;
+  }
+
+  .menu h2 {
+    margin-top: 10%;
+    font-size: 30px;
+  }
+
+  .menu p {
+    font-size: 14px;
+  }
+
+  .biodata .row .bio-image img {
+    width: 40vw;
+  }
+
+  .biodata .row .text-box .text-group {
+    font-size: 1px;
+  }
+
+  .biodata .row .text-box .text-group p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .hero .box-hero .box:nth-child(2) {
+    width: 55vw;
+    align-self: flex-end;
+    justify-self: center;
+  }
+
+  .about h2 {
+    margin-top: 10%;
+    font-size: 30px;
+  }
+
+  .menu h2 {
+    margin-top: 10%;
+    font-size: 30px;
+  }
+
+  .biodata .row .bio-image .profile img {
+    width: 80vw;
+    /* border-radius: 5px; */
+  }
+}
